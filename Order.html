@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut" type="x-icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express-mart</title>
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Custom css file link -->
+    <link rel="stylesheet" href="./order.css">
+</head>
+<body>
+<!-- Header section starts -->
+<header class="h1">
+    <article class="container">
+        <article class="logo-container">
+            <article class="logo">
+                <img src="logo.png">
+            </article>
+            <article class="signup"></article>
+        </article>
+        <article class="cart">
+            <!-- Searchbar -->
+            <form class="search-form">
+                <input type="search" name="search" placeholder=" Search your product">
+                <button type="submit" class="product-search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </article>
+    </article>
+    <article class="header-2">
+        <!-- Menu bar for the navbar -->
+        <article id="menu-bar" class="fas fa-bars"></article>
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <ul class="Links">
+                <li><a href="./Home.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <!-- Dropdown menu -->
+                <li>
+                    <a href="#">Products <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./Vegetables.html">Vegetables</a></li>
+                        <li><a href="./Dairy.html">Dairy products</a></li>
+                        <li><a href="./Cosmetics.html">Cosmetics</a></li>
+                    </ul>
+                </li>
+                <li><a href="./Order.html">Order</a></li>
+                <li><a href="./Loyalty.html">Loyalty registration</a></li>
+            </ul>
+        </nav>
+        <!-- Icons -->
+        <article class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-user-circle"></a>
+        </article>
+    </article>
+</header>
+
+<script src="script.js">
+
+</script>
+
+<!--header section ends-->
+
+<!---Products table start-->
+
+<!--my cart table-->
+<section class="cart">
+    <!--heading-->
+    <div class="heading">
+        <h3 class="heading"><u>My Cart</u></h3>
+    </div>
+  
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Image</th>
+                <th>Price per Unit</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Matte color lipstick</b></td>
+                <td><img src="lipstick.png" alt="Lipstick"></td>
+                <td>Rs. 2,100</td>
+                <td>1</td>
+                <td>Rs. 2,100</td>
+            </tr>
+            <tr>
+                <td><b>Beetroot</b></td>
+                <td><img src="Beetroot.png" alt="Beetroot"></td>
+                <td>Rs. 70</td>
+                <td>500g</td>
+                <td>Rs. 350</td>
+            </tr>
+            <tr>
+                <td><b>Brinjal</b></td>
+                <td><img src="brinjal.png" alt="Brinjal"></td>
+                <td>Rs. 80</td>
+                <td>1kg</td>
+                <td>Rs. 800</td>
+            </tr>
+            <tr>
+                <td><b>Highland Ice-cream Vanilla</b></td>
+                <td><img src="highland_icecream.png" alt="Highland Ice-cream Vanilla"></td>
+                <td>Rs. 760</td>
+                <td>1</td>
+                <td>Rs. 760</td>
+            </tr>
+            <tr>
+                <td><b>Concealer elf Cosmetics</B></td>
+                <td><img src="concealer.png" alt="Niviea"></td>
+                <td>Rs. 3,279</td>
+                <td>3</td>
+                <td>Rs. 9,837</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"><b>Grand Total</b></td>
+                <td><b>Rs. 13,847</b></td>
+            </tr>
+        </tfoot>
+    </table>
+  </section>
+<!---Products table end-->
+
+<!---Payment button starts-->
+
+<section>
+    <a class="btn" href="./payment.html">Proceed to payment</a>
+</section>
+
+<!--Payment button starts-->
+
+<!-- Footer section starts -->
+<footer>
+    <article class="footer-container">
+        <article class="footer-section">
+            <h2>About Us</h2>
+            <p>XpressMart is committed to providing top-quality groceries and excellent customer service. Visit our store or order online to experience convenience and quality.</p>
+        </article>
+        <article class="footer-section">
+            <h2 id="qlink">Quick Links</h2>
+            <ul>
+                <li><a href="./Home.html">Home</a></li>
+                <li id="li2"><a href="./About.html">About</a></li>
+                <li id="li2"><a href="./Products.html">Products</a></li>
+                <li id="li2"><a href="./Order.html">Order</a></li>
+                <li id="li2"><a href="./Loyalty.html">Loyalty registration</a></li>
+            </ul>
+        </article>
+        <article class="footer-section">
+            <h2 id="socialflw">Follow Us</h2>
+            <article class="social-icons">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+            </article>
+        </article>
+    </article>
+    <article class="footer-bottom">
+        <p>&copy; 2023 XpressMart. All rights reserved.</p>
+    </article>
+</footer>
+<!-- Footer section ends -->
+
+
+</body>
+</html>

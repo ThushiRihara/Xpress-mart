@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut" type="x-icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express-mart</title>
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Custom css file link -->
+    <link rel="stylesheet" href="./cosmetics.css">
+</head>
+<body>
+<!-- Header section starts -->
+<header class="h1">
+    <article class="container">
+        <article class="logo-container">
+            <article class="logo">
+                <img src="logo.png">
+            </article>
+            <article class="signup"></article>
+        </article>
+        <article class="cart">
+            <!-- Searchbar -->
+            <form class="search-form">
+                <input type="search" name="search" placeholder=" Search your product">
+                <button type="submit" class="product-search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </article>
+    </article>
+    <article class="header-2">
+        <!-- Menu bar for the navbar -->
+        <article id="menu-bar" class="fas fa-bars"></article>
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <ul class="Links">
+                <li><a href="./Home.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <!-- Dropdown menu -->
+                <li>
+                    <a href="#">Products <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./Vegetables.html">Vegetables</a></li>
+                        <li><a href="./Dairy.html">Dairy products</a></li>
+                        <li><a href="./Cosmetics.html">Cosmetics</a></li>
+                    </ul>
+                </li>
+                <li><a href="./Order.html">Order</a></li>
+                <li><a href="./Loyalty.html">Loyalty registration</a></li>
+            </ul>
+        </nav>
+        <!-- Icons -->
+        <article class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-user-circle"></a>
+        </article>
+    </article>
+</header>
+
+<script src="script.js">
+
+</script>
+
+<!--header section ends-->
+
+<!---cosmetics intro starts-->
+
+<section class="Hmain">
+<div class="hcover-content">         
+    <h1>COSMETICS & SKIN CARE</h1>
+</div>
+<div class="content">
+    <p>At Xpress-Mart, we are delighted to offer a curated selection of high-quality cosmetics and skin care products to enhance your beauty and skin health. Explore our range of premium skincare essentials, makeup must-haves, and specialized treatments designed to pamper and rejuvenate.
+     Whether you're looking for a daily skincare routine, makeup for a special occasion, or targeted solutions for specific skin concerns, we have something for everyone. Our collection includes trusted brands known for their efficacy and gentle formulations, ensuring a delightful experience with every use.</p>
+</div>
+</section>
+
+
+<!---cosmetics intro ends-->
+
+<!---products table starts-->
+
+<section>
+    <div class="products-section">
+     <h2>Our products</h2>
+<!---Cosmetic products in a table--->
+<table class="cosmetics">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Product 1 -->
+        <tr>
+            <td><img src="lipstick.png" alt="Product 1"></td>
+            <td>Matte color lipstick</td>
+            <td>Rs. 2,100</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+        <!-- Product 2 -->
+        <tr>
+            <td><img src="loreal_shampoo.png" alt="Product 2"></td>
+            <td> Loreal Elvive Shampoo + Conditioner</td>
+            <td>Rs. 4,980</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+        <!-- Product 3 -->
+        <tr>
+            <td><img src="mascara.png" alt="Product 3"></td>
+            <td> L'Oréal Paris original Mascara</td>
+            <td>Rs. 3,980</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+        <tr>
+            <td><img src="concealer.png" alt="Product 3"></td>
+            <td>Concealer elf Cosmetics</td>
+            <td>Rs. 3,279</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+        
+        <tr>
+            <td><img src="foundation.png" alt="Product 3"></td>
+            <td>BB foundation cream</td>
+            <td>Rs. 4,995</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+        
+        <tr>
+            <td><img src="eyeshadow.png" alt="Product 3"></td>
+            <td>Huda Beauty Nude Eyeshadow Palette</td>
+            <td>Rs. 2,465</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+        
+        <tr>
+            <td><img src="face_scrub.png" alt="Product 3"></td>
+            <td>Himalaya Gentle Exfoliating Apricot Face Scrub</td>
+            <td>Rs. 1,350</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+
+        <tr>
+            <td><img src="hand_cream.png" alt="Product 3"></td>
+            <td>Shea Butter Hand Cream</td>
+            <td>Rs. 2,400</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+
+        <tr>
+            <td><img src="vitamin_C.png" alt="Product 3"></td>
+            <td>Natural Vitamin C Serum</td>
+            <td>Rs. 1,350</td>
+            <td><a class="btn" href="./Order.html">Add to Cart</a></td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div></section>
+<!---products table ends-->
+
+<!-- Footer section starts -->
+<footer>
+    <article class="footer-container">
+        <article class="footer-section">
+            <h2>About Us</h2>
+            <p>XpressMart is committed to providing top-quality groceries and excellent customer service. Visit our store or order online to experience convenience and quality.</p>
+        </article>
+        <article class="footer-section">
+            <h2 id="qlink">Quick Links</h2>
+            <ul>
+                <li><a href="./Home.html">Home</a></li>
+                <li id="li2"><a href="./About.html">About</a></li>
+                <li id="li2"><a href="./Products.html">Products</a></li>
+                <li id="li2"><a href="./Order.html">Order</a></li>
+                <li id="li2"><a href="./Loyalty.html">Loyalty registration</a></li>
+            </ul>
+        </article>
+        <article class="footer-section">
+            <h2 id="socialflw">Follow Us</h2>
+            <article class="social-icons">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+            </article>
+        </article>
+    </article>
+    <article class="footer-bottom">
+        <p>&copy; 2023 XpressMart. All rights reserved.</p>
+    </article>
+</footer>
+<!-- Footer section ends -->
+
+

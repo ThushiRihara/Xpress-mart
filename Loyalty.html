@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut" type="x-icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express-mart</title>
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Custom css file link -->
+    <link rel="stylesheet" href="./Loyalty.css">
+</head>
+<body>
+<!-- Header section starts -->
+<header class="h1">
+    <article class="container">
+        <article class="logo-container">
+            <article class="logo">
+                <img src="logo.png">
+            </article>
+            <article class="signup"></article>
+        </article>
+        <article class="cart">
+            <!-- Searchbar -->
+            <form class="search-form">
+                <input type="search" name="search" placeholder=" Search your product">
+                <button type="submit" class="product-search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </article>
+    </article>
+    <article class="header-2">
+        <!-- Menu bar for the navbar -->
+        <article id="menu-bar" class="fas fa-bars"></article>
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <ul class="Links">
+                <li><a href="./Home.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <!-- Dropdown menu -->
+                <li>
+                    <a href="#">Products <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./Vegetables.html">Vegetables</a></li>
+                        <li><a href="./Dairy.html">Dairy products</a></li>
+                        <li><a href="./Cosmetics.html">Cosmetics</a></li>
+                    </ul>
+                </li>
+                <li><a href="./Order.html">Order</a></li>
+                <li><a href="./Loyalty.html">Loyalty registration</a></li>
+            </ul>
+        </nav>
+        <!-- Icons -->
+        <article class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-user-circle"></a>
+        </article>
+    </article>
+</header>
+
+<script src="script.js">
+
+</script>
+
+<!--header section ends-->
+
+<!---registration form starts-->
+
+<section class="form">
+    <h1>Loyalty Program Registration</h1>
+    <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="loyaltyScheme">Choose a Loyalty Scheme:</label>
+        <select id="loyaltyScheme" name="loyaltyScheme">
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+            <option value="platinum">Platinum</option>
+        </select>
+        
+        <button type="submit">Register</button>
+    </form>
+    
+    <div class="loyaltyBenefits">
+        <h2>Loyalty Scheme Benefits:</h2>
+        <div class="benefits">
+            <h3>Silver Scheme</h3>
+            <p>- 5% discount on selected items</p>
+            <p>- Exclusive monthly offers</p>
+        </div>
+        <div class="benefits">
+            <h3>Gold Scheme</h3>
+            <p>- 10% discount on selected items</p>
+            <p>- Priority customer support</p>
+            <p>- Birthday rewards</p>
+        </div>
+        <div class="benefits">
+            <h3>Platinum Scheme</h3>
+            <p>- 15% discount on selected items</p>
+            <p>- VIP access to events</p>
+            <p>- Personal shopper services</p>
+        </div>
+    </div>
+</section>
+<!---registration form ends-->
+
+<!-- Footer section starts -->
+<footer>
+    <article class="footer-container">
+        <article class="footer-section">
+            <h2>About Us</h2>
+            <p>XpressMart is committed to providing top-quality groceries and excellent customer service. Visit our store or order online to experience convenience and quality.</p>
+        </article>
+        <article class="footer-section">
+            <h2 id="qlink">Quick Links</h2>
+            <ul>
+                <li><a href="./Home.html">Home</a></li>
+                <li id="li2"><a href="./About.html">About</a></li>
+                <li id="li2"><a href="./Products.html">Products</a></li>
+                <li id="li2"><a href="./Order.html">Order</a></li>
+                <li id="li2"><a href="./Loyalty.html">Loyalty registration</a></li>
+            </ul>
+        </article>
+        <article class="footer-section">
+            <h2 id="socialflw">Follow Us</h2>
+            <article class="social-icons">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+            </article>
+        </article>
+    </article>
+    <article class="footer-bottom">
+        <p>&copy; 2023 XpressMart. All rights reserved.</p>
+    </article>
+</footer>
+<!-- Footer section ends -->
