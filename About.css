@@ -537,7 +537,7 @@ iframe{
 }
 
 .table td{
-    background-color: #75A47F;
+    background-color: #D9EDBF;
     padding: 1.5rem;
     border: 1px solid black;
 }
@@ -609,12 +609,6 @@ footer {
     margin-bottom: 2%;
 }
 
-/* .footer-section ul li a:hover {
-    color: var(--green);
-    border-radius: 15px;
-   
-    
-} */
 
 #socialflw{
     margin-left: 50%;
