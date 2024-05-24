@@ -601,6 +601,12 @@ ul li:hover ul.dropdown {
     left: -15vh;
   }
 
+  @media (max-width: 768px) {
+    .sub-section{
+        display: none;
+    }
+}
+
   
 /*-----------------2 subparas ends--------------------------------*/
 
