@@ -63,6 +63,17 @@ section {
     background-color: #BACD92;
 }
 
+/* to hide the search product label */
+label[for="product-search"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+}
+
 .search-form input {
     width: calc(100% - 40px);
     height: 35px;
@@ -86,6 +97,17 @@ section {
     background-color: transparent;
     border: none;
     margin-right: 70px;
+}
+
+/* Visually hide the search span */
+.product-search-button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .container {
@@ -369,6 +391,10 @@ ul li:hover ul.dropdown {
 
 /* header ends */
 
+/* order summary table starts */
+
+/* order summary table ends */
+
 /* Order Form Starts */
 
 .orderform {
@@ -400,6 +426,10 @@ ul li:hover ul.dropdown {
     color: #000000;
     margin-bottom: 1rem;
     font-size: 18px;
+}
+
+.order-container p {
+    font-size: 14px;
 }
 
 .order-container form {

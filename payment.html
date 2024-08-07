@@ -16,15 +16,18 @@
     <article class="container">
         <article class="logo-container">
             <article class="logo">
-                <img src="logo.png">
+                <img src="logo.png" alt="X-pressmart logo">
             </article>
             <article class="signup"></article>
         </article>
         <article class="cart">
             <!-- Searchbar -->
             <form class="search-form">
-                <input type="search" name="search" placeholder=" Search your product">
-                <button type="submit" class="product-search-button"><i class="fas fa-search"></i></button>
+                <label for="product-search">Search your product</label>
+                <input type="search" id="product-search" name="search" placeholder=" Search your product">
+                <button type="submit" class="product-search-button"><i class="fas fa-search"></i>
+                <span>Search</span>
+                </button>
             </form>
         </article>
     </article>
@@ -51,9 +54,9 @@
         </nav>
         <!-- Icons -->
         <article class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-user-circle"></a>
+            <a href="#" class="fas fa-shopping-cart" aria-label="Shopping-cart"></a>
+            <a href="#" class="fas fa-heart" aria-label="Favourites"></a>
+            <a href="#" class="fas fa-user-circle" aria-label="User Profile"></a>
         </article>
     </article>
 </header>
@@ -142,10 +145,10 @@
         <article class="footer-section">
             <h2 id="socialflw">Follow Us</h2>
             <article class="social-icons">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin-in"></a>
+                <a href="https://www.facebook.com" aria-label="Facebook" class="fab fa-facebook-f"></a>
+                <a href="https://www.twitter.com" aria-label="Twitter" class="fab fa-twitter"></a>
+                <a href="https://www.instagram.com" aria-label="Instagram" class="fab fa-instagram"></a>
+                <a href="https://www.linkedin.com" aria-label="Linkedin" class="fab fa-linkedin-in"></a>
             </article>
         </article>
     </article>
@@ -155,6 +158,6 @@
 </footer>
 <!-- Footer section ends -->
 
-<script src="script.js"></script>
+<script src="payment.js"></script>
 </body>
 </html>

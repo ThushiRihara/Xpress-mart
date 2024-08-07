@@ -63,6 +63,18 @@ section {
     background-color: #BACD92;
 }
 
+/* to hide the search product label */
+label[for="product-search"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+}
+
+
 .search-form input {
     width: calc(100% - 40px);
     height: 35px;
@@ -86,6 +98,17 @@ section {
     background-color: transparent;
     border: none;
     margin-right: 70px;
+}
+
+/* Visually hide the search span */
+.product-search-button span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .container {
@@ -280,9 +303,6 @@ ul li:hover ul.dropdown {
     }
 }
 
-
-
-
 .header-2 {
     background: #fff;
     display: flex;
@@ -367,74 +387,181 @@ ul li:hover ul.dropdown {
     }
 }
 
-/* header ends */
-
-/* vegetables intro starts*/
-
-.Hmain{
-    background: url(vege_background.png);
-    width: 100%;
-    height: 50vh;
-    background-size: cover;
-  }
-
-  .hcover-content{
-    padding-right: 3rem;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 4rem;
-    
-  }
-  
-  
-  .content p{
-    justify-content: center;
-    text-align: center;
-    margin-top: 0.5rem;
-    line-height: 30px;
-    font-size: medium;
-    padding-top: 20px;
-    font-size: 15px;
-  }
-
-   /* Responsive styling */
-
-@media (max-width: 768px) {
-    .hcover-content {
-        font-size: 3rem;
+@media (min-width: 430px) and (max-width: 932px) {
+    .heading {
+        font-size: 2.8rem;
+        padding: 1.5rem;
     }
 
-    .content p {
-        font-size: 0.9rem;
+    .btn {
+        font-size: 1.6rem;
+        padding: .6rem 2.5rem;
     }
-}
 
-@media (max-width: 576px) {
-    .Hmain {
+    .search-form input {
+        width: 90%;
+        font-size: 16px;
+        margin: 1rem auto;
+    }
+
+    .header-2 {
+        padding: 1.5rem 7%;
+    }
+
+    .header-2 .navbar a {
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo img {
+        width: 100px;
         height: auto;
-        padding: 2rem 1rem;
     }
 
-    .hcover-content {
+    .cart {
+        margin-top: 1.5rem;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-2 .icons a {
+        font-size: 2.3rem;
+    }
+
+    #menu-bar {
+        display: block;
+        margin-top: 1rem;
+        padding: .5rem;
         font-size: 2.5rem;
     }
-
-    .content p {
-        font-size: 0.8rem;
-    }
 }
 
-@media (max-width: 480px) {
-    .hcover-content {
+@media (min-width: 265px) and (max-width: 506px) {
+    .heading {
+        font-size: 2.2rem;
+        padding: 1rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: .5rem 2rem;
+    }
+
+    .search-form input {
+        width: 100%;
+        font-size: 14px;
+        margin: 1rem 0;
+    }
+
+    .header-2 {
+        padding: 1rem 5%;
+    }
+
+    .header-2 .navbar a {
+        font-size: 1.8rem;
+        padding: 8px 15px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .cart {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-2 .icons a {
         font-size: 2rem;
     }
 
-    .content p {
-        font-size: 0.75rem;
+    #menu-bar {
+        display: block;
+        margin-top: 1rem;
+        padding: .5rem;
+        font-size: 2rem;
     }
 }
 
-/* Responsive styling */
+@media (min-width: 360px) and (max-width: 740px) {
+    .heading {
+        font-size: 2.8rem;
+        padding: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.6rem;
+        padding: .6rem 2.5rem;
+    }
+
+    .search-form input {
+        width: 95%;
+        font-size: 16px;
+        margin: 1rem auto;
+        padding: 10px;
+    }
+
+    .header-2 {
+        padding: 1rem 4%;
+    }
+
+    .header-2 .navbar a {
+        font-size: 1.6rem;
+        padding: 8px 12px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo img {
+        width: 90px;
+        height: auto;
+    }
+
+    .cart {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-2 .icons a {
+        font-size: 2.2rem;
+        padding: 5px;
+    }
+
+    #menu-bar {
+        display: block;
+        margin-top: 1rem;
+        padding: .5rem;
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+/* header ends */
+
 
 /* Main content styles */
 .heading {
@@ -596,18 +723,295 @@ button:hover {
     background-color: #45a049;
     border-radius: 0px;
     width: 33%; 
+    color: #000000;
+    font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #09251c;
+    background-color: #207459;
 }
+
+/* Media Queries for responsiveness */
+@media (min-width: 421px) and (max-width: 675px) {
+    .heading {
+        font-size: 26px; 
+    }
+
+    .section {
+        margin: 10px; 
+    }
+
+    .section h2,
+    .section h3,
+    .section h4,
+    .section h5,
+    .section h6 {
+        font-size: 20px; 
+        margin-left: 10%; 
+    }
+
+    .items {
+        display: block; 
+    }
+
+    .item {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .item img {
+        width: 80%;
+        height: auto; 
+        margin-bottom: 5px; 
+    }
+
+    .item span {
+        font-size: 16px; 
+        margin-bottom: 5px; 
+    }
+
+    .item input {
+        width: 50%;
+        margin-bottom: 5px; 
+    }
+
+    .item button {
+        width: 100%; 
+    }
+
+    #cart-table {
+        font-size: 12px; 
+    }
+
+    #cart-table th, #cart-table td {
+        padding: 8px; 
+    }
+
+    button, .btn {
+        width: 100%;
+        margin: 5px 0; 
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 390px) and (max-width: 844px) {
+    .heading {
+        font-size: 26px; 
+    }
+
+    .section {
+        margin: 10px; 
+        padding: 15px; 
+    }
+
+    .section h2,
+    .section h3,
+    .section h4,
+    .section h5,
+    .section h6 {
+        font-size: 20px;
+        margin-left: 5%; 
+    }
+
+    .items {
+        display: block; 
+    }
+
+    .item {
+        flex-direction: column; 
+        align-items: flex-start; 
+        margin-bottom: 15px; 
+    }
+
+    .item img {
+        width: 80%;
+        height: auto; 
+        margin-bottom: 5px; 
+    }
+
+    .item span {
+        font-size: 16px; 
+        margin-bottom: 5px; 
+    }
+
+    .item input {
+        width: 70%;
+        margin-bottom: 5px; 
+    }
+
+    .item button {
+        width: 100%;
+    }
+
+    #cart-table {
+        font-size: 14px; 
+    }
+
+    #cart-table th, #cart-table td {
+        padding: 10px; /
+    }
+
+    button, .btn {
+        width: 100%; 
+        margin: 5px 0; 
+    }
+
+    /* Specific adjustments for larger screens */
+    @media (min-width: 600px) {
+        .section {
+            margin: 20px;
+        }
+
+        .item {
+            flex-direction: row; 
+        }
+
+        .item img {
+            width: 100px;
+            height: 90px; 
+        }
+
+        .item span {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 667px) {
+    .heading {
+        font-size: 22px; 
+    }
+
+    .section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .section h2,
+    .section h3,
+    .section h4,
+    .section h5,
+    .section h6 {
+        font-size: 16px; 
+        margin-left: 5%; 
+    }
+
+    .items {
+        display: block; 
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start; 
+        margin-bottom: 15px; 
+    }
+
+    .item img {
+        width: 80%; 
+        height: auto; 
+        margin-bottom: 5px;
+    }
+
+    .item span {
+        font-size: 14px; 
+        margin-bottom: 5px; 
+    }
+
+    .item input {
+        width: 80%; 
+        margin-bottom: 5px; 
+    }
+
+    .item button {
+        width: 100%; 
+        padding: 8px;
+    }
+
+    #cart-table {
+        font-size: 12px; 
+    }
+
+    #cart-table th, #cart-table td {
+        padding: 8px; 
+    }
+
+    button, .btn {
+        width: 100%; 
+        margin: 5px 0; 
+    }
+}
+
+@media (min-width: 360px) and (max-width: 740px) {
+    .heading {
+        font-size: 22px; 
+        padding: 15px; 
+    }
+
+    .section {
+        margin: 10px; 
+        padding: 10px;
+    }
+
+    .section h2,
+    .section h3,
+    .section h4,
+    .section h5,
+    .section h6 {
+        font-size: 18px; 
+        margin-left: 5%; 
+    }
+
+    .items {
+        display: block; 
+    }
+
+    .item {
+        flex-direction: column; 
+        align-items: flex-start; 
+        margin-bottom: 15px; 
+    }
+
+    .item img {
+        width: 80%; 
+        height: auto; 
+        margin-bottom: 5px; 
+    }
+
+    .item span {
+        font-size: 16px; 
+        margin-bottom: 5px; 
+    }
+
+    .item input {
+        width: 70%; 
+        margin-bottom: 5px; 
+    }
+
+    .item button {
+        width: 100%;
+    }
+
+    #cart-table {
+        font-size: 12px; 
+    }
+
+    #cart-table th, #cart-table td {
+        padding: 8px; 
+    }
+
+    button, .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
 
 /* Products section ends */
 
 /* Footer starts */
 
 footer {
-    background-color: var(--dark-green);
+    background-color: #114232;
     color: #fff;
     padding: 2rem 9%;
     display: flex;
