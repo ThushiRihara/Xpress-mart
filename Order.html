@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!---Favicon link------->
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="shortcut" type="x-icon" href="logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express-mart</title>
     <!-- Font awesome cdn link -->
@@ -35,18 +34,15 @@
         <!-- Navbar -->
         <nav class="navbar" id="navbar">
             <ul class="Links">
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Home.html">Home</a></li>
                 <li><a href="./About.html">About</a></li>
                 <!-- Dropdown menu -->
                 <li>
                     <a href="#">Products <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="./vegetables.html">Vegetables</a></li>
+                        <li><a href="./Vegetables.html">Vegetables</a></li>
                         <li><a href="./Dairy.html">Dairy products</a></li>
-                        <li><a href="./cosmetics.html">Cosmetics</a></li>
-                        <li><a href="./fruits.html">Fruits</a></li>
-                        <li><a href="./meat.html">Meat & Seafood</a></li>
-                        <li><a href="./bakery.html">Baking & cooking ingredients</a></li>
+                        <li><a href="./Cosmetics.html">Cosmetics</a></li>
                     </ul>
                 </li>
                 <li><a href="./Order.html">Order</a></li>
@@ -61,86 +57,266 @@
         </article>
     </article>
 </header>
-
-<script src="script.js">
-
-</script>
-
 <!--header section ends-->
 
-<!---Products table start-->
+<!-- Order section starts -->
+<section>
+    <h1 class="heading">Order Groceries</h1>
 
-<!--my cart table-->
-<section class="cart">
-    <!--heading-->
-    <div class="heading">
-        <h3 class="heading">My Cart</h3>
+    <!-- Fruits Section -->
+    <div class="section">
+        <input type="checkbox" id="fruits-toggle" class="toggle-checkbox">
+        <label for="fruits-toggle" class="toggle-label"><h2>Fruits</h2></label>
+        <div class="items">
+            <div class="item">
+                <img src="Pineapple.jpeg" alt="Pineapple">
+                <span>Pineapple -Rs 690/kg</span>
+                <input type="number" id="pineapple" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Pineapple', 'pineapple', 690)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="apple.png" alt="Apple">
+                <span>Apple -Rs 380/kg</span>
+                <input type="number" id="apple" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Apple', 'apple', 380)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="strawberry.jpg" alt="Strawberry">
+                <span>Strawberry -Rs 1120/kg</span>
+                <input type="number" id="strawberry" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Strawberry', 'strawberry', 1120)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="grapes.jpeg" alt="Grapes">
+                <span>Grapes -Rs 1450/kg</span>
+                <input type="number" id="grapes" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Grapes', 'grapes', 1450)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="mango.jpg" alt="Mango">
+                <span>Mango -Rs 560/kg</span>
+                <input type="number" id="mango" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Mango', 'mango', 560)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="Watermelon.jpg" alt="Watermelon">
+                <span>Watermelon -Rs 450/kg</span>
+                <input type="number" id="watermelon" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Watermelon', 'watermelon', 450)">Add to Cart</button>
+            </div>
+        </div>
     </div>
-  
-    <table>
+
+    <!-- Vegetables Section -->
+    <div class="section">
+        <input type="checkbox" id="vegetables-toggle" class="toggle-checkbox">
+        <label for="vegetables-toggle" class="toggle-label"><h3>Vegetables</h3></label>
+        <div class="items">
+            <div class="item">
+                <img src="tomato.png" alt="Tomato">
+                <span>Tomato -Rs 575/kg</span>
+                <input type="number" id="tomato" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Tomato', 'tomato', 575)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="potato.png" alt="Potato">
+                <span>Potato -Rs 340/kg</span>
+                <input type="number" id="potato" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Potato', 'potato', 340)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="carrot.png" alt="Carrot">
+                <span>Carrot -Rs 670/kg</span>
+                <input type="number" id="carrot" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Carrot', 'carrot', 670)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="cabbage.png" alt="Cabbage">
+                <span>Cabbage -Rs 454/kg</span>
+                <input type="number" id="cabbage" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Cabbage', 'cabbage', 454)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="onion.png" alt="Onion">
+                <span>Onion -Rs 560/kg</span>
+                <input type="number" id="onion" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Onion', 'onion', 560)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="pumpkin.png" alt="Pumpkin">
+                <span>Pumpkin -Rs 300/kg</span>
+                <input type="number" id="pumpkin" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Pumpkin', 'pumpkin', 300)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dairy Produce Section -->
+    <div class="section">
+        <input type="checkbox" id="dairy-toggle" class="toggle-checkbox">
+        <label for="dairy-toggle" class="toggle-label"><h4>Dairy Produce</h4></label>
+        <div class="items">
+            <div class="item">
+                <img src="ambewela.png" alt="Milk">
+                <span>Ambewela fresh milk -Rs 550</span>
+                <input type="number" id="milk" placeholder="Qty" min="0">
+                <button onclick="addToCart('Milk', 'milk', 550)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="highland_curd.png" alt="Curd">
+                <span>Curd -Rs 300</span>
+                <input type="number" id="curd" placeholder="Qty" min="0">
+                <button onclick="addToCart('Curd', 'curd', 300)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="highland_icecream.png" alt="Ice-cream">
+                <span>Higland ice-cream -Rs 760</span>
+                <input type="number" id="ice-cream" placeholder="Qty" min="0">
+                <button onclick="addToCart('cornflour', 'cornflour', 760)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="highland_yoghurt.png" alt="Yogurt">
+                <span>Highland set yoghurt -Rs 90</span>
+                <input type="number" id="yogurt" placeholder="Qty" min="0">
+                <button onclick="addToCart('Highland set yoghurt', 'yogurt', 90)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="kotmale_mozarella.png" alt="Cheese">
+                <span>Kotmale mozarella cheese -Rs 1250</span>
+                <input type="number" id="cheese" placeholder="Qty" min="0">
+                <button onclick="addToCart('Kotmale mozarella cheese', 'cheese', 1250)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="lurpark_butter.jpeg" alt="Butter">
+                <span>Lurpark butter -Rs 1240</span>
+                <input type="number" id="butter" placeholder="Qty" min="0">
+                <button onclick="addToCart('Lurpark butter', 'butter', 1240)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meats and Seafood Section -->
+    <div class="section">
+        <input type="checkbox" id="meats-seafood-toggle" class="toggle-checkbox">
+        <label for="meats-seafood-toggle" class="toggle-label"><h5>Meats and Seafood</h5></label>
+        <div class="items">
+            <div class="item">
+                <img src="chicken_breast.jpg" alt="Chicken">
+                <span>Chicken breast-Rs 960/kg</span>
+                <input type="number" id="chicken" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Chicken breast', 'chicken', 960)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="prawns.jpeg" alt="Prawns">
+                <span>Fresh prawns -Rs 2500/kg</span>
+                <input type="number" id="prawns" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Prawns', 'prawns', 2500)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="pork.png" alt="Pork">
+                <span>Pork -Rs 2750/kg</span>
+                <input type="number" id="pork" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Pork', 'pork', 2750)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="salmon.png" alt="Salmon">
+                <span>Salmon fillet -Rs 3100/kg</span>
+                <input type="number" id="salmon" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Salmon fillet', 'salmon', 3100)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="crabs.jpg" alt="Crab">
+                <span>Crab -Rs 1520/kg</span>
+                <input type="number" id="crab" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Crab', 'crab', 1520)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="tilapia.jpg" alt="Fish">
+                <span>Tilapia -Rs 950/kg</span>
+                <input type="number" id="fish" placeholder="Kgs" min="0">
+                <button onclick="addToCart('Tilapia', 'fish', 950)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Baking and Cooking Ingredients Section -->
+    <div class="section">
+        <input type="checkbox" id="baking-cooking-toggle" class="toggle-checkbox">
+        <label for="baking-cooking-toggle" class="toggle-label"><h6>Baking and Cooking Ingredients</h6></label>
+        <div class="items">
+            <div class="item">
+                <img src="flour.png" alt="Flour">
+                <span>7 star whole purpose flour -Rs 640</span>
+                <input type="number" id="flour" placeholder="Qty" min="0">
+                <button onclick="addToCart('7 star flour', 'flour', 640)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="redman.png" alt="Whipcream">
+                <span>Redman whipping cream -Rs 3225</span>
+                <input type="number" id="whipcream" placeholder="Qty" min="0">
+                <button onclick="addToCart('Redman whipping cream', 'whipcream', 3225)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="coco powder.jpg" alt="Coco-powder">
+                <span>Jelo cocoa-powder -Rs 250</span>
+                <input type="number" id="coco-powder" placeholder="Qty" min="0">
+                <button onclick="addToCart('Jelo cocoa-powder', 'coco-powder', 250)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="oil.png" alt="Oil">
+                <span>Oil -Rs 670</span>
+                <input type="number" id="oil" placeholder="Qty" min="0">
+                <button onclick="addToCart('Oil', 'oil', 670)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="cornflour.png" alt="Cornflour">
+                <span>Motha cornflour -Rs 320</span>
+                <input type="number" id="cornflour" placeholder="Qty" min="0">
+                <button onclick="addToCart('Motha cornflour', 'cornflour', 320)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="honey.jpg" alt="Honey">
+                <span>Honey -Rs 290</span>
+                <input type="number" id="honey" placeholder="Qty" min="0">
+                <button onclick="addToCart('Honey', 'honey', 290)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Order section ends -->
+
+
+<!-- Cart Table -->
+<section>
+    <h2>Current Items</h2>
+    <table id="cart-table">
         <thead>
             <tr>
                 <th>Item</th>
-                <th>Image</th>
-                <th>Price per Unit</th>
                 <th>Quantity</th>
-                <th>Total Price</th>
+                <th>Price</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Matte color lipstick</td>
-                <td><img src="lipstick.png" alt="Lipstick"></td>
-                <td>Rs. 2,100</td>
-                <td>1</td>
-                <td>Rs. 2,100</td>
-            </tr>
-            <tr>
-                <td>Beetroot</td>
-                <td><img src="Beetroot.png" alt="Beetroot"></td>
-                <td>Rs. 70</td>
-                <td>500g</td>
-                <td>Rs. 350</td>
-            </tr>
-            <tr>
-                <td>Brinjal</td>
-                <td><img src="brinjal.png" alt="Brinjal"></td>
-                <td>Rs. 80</td>
-                <td>1kg</td>
-                <td>Rs. 800</td>
-            </tr>
-            <tr>
-                <td>Highland Ice-cream Vanilla</td>
-                <td><img src="highland_icecream.png" alt="Highland Ice-cream Vanilla"></td>
-                <td>Rs. 760</td>
-                <td>1</td>
-                <td>Rs. 760</td>
-            </tr>
-            <tr>
-                <td>Concealer elf Cosmetics</td>
-                <td><img src="concealer.png" alt="Niviea"></td>
-                <td>Rs. 3,279</td>
-                <td>3</td>
-                <td>Rs. 9,837</td>
-            </tr>
+            <!-- Cart items will be dynamically added here -->
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="4">Grand Total</td>
-                <td>Rs. 13,847</td>
+                <td colspan="2">Total</td>
+                <td id="total-price"> Rs 0</td>
             </tr>
         </tfoot>
     </table>
-  </section>
-<!---Products table end-->
+    <button onclick="saveToFavorites()">Add to Favourites</button>
+    <button onclick="applyFavorites()">Apply Favourites</button>
+</section>
 
-<!---Payment button starts-->
-
+<!-- Payment button starts -->
 <section>
     <a class="btn" href="./payment.html">Proceed to payment</a>
 </section>
-
-<!--Payment button starts-->
+<!-- Payment button ends -->
 
 <!-- Footer section starts -->
 <footer>
@@ -152,7 +328,7 @@
         <article class="footer-section">
             <h2 id="qlink">Quick Links</h2>
             <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Home.html">Home</a></li>
                 <li id="li2"><a href="./About.html">About</a></li>
                 <li id="li2"><a href="./Products.html">Products</a></li>
                 <li id="li2"><a href="./Order.html">Order</a></li>
@@ -175,6 +351,6 @@
 </footer>
 <!-- Footer section ends -->
 
-
+<script src="script.js"></script>
 </body>
 </html>

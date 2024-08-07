@@ -369,150 +369,245 @@ ul li:hover ul.dropdown {
 
 /* header ends */
 
+/* vegetables intro starts*/
 
+.Hmain{
+    background: url(vege_background.png);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+  }
 
-/*cart table starts*/
-.cart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  color: #000000;
-  
-}
-
-table {
-  width: 80%;
-  border-collapse: collapse;
-  margin: 10px 0;
-  align-items: center;
-}
-
-thead tr th{
-    font-weight: bold;
-    font-size: 16px;
-}
-
-th, td {
-  border: 1px solid #000000;
-  padding: 8px;
-  text-align: center;
-  font-size: 18px;
-}
-
-th {
-  background-color: rgb(165, 164, 164);
-  height: 60px; 
-}
-
-td {
-  background:rgb(255, 255, 255);
-  font-size: 16px;
-}
-
-td img {
-  width: 100px;
-  height: 100px;
-}
-
-tfoot td{
-    font-weight: bold;
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 1029.33px) {
-    table {
-      width: 100%;
-    }
+  .hcover-content{
+    padding-right: 3rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
     
-    th, td {
-      font-size: 16px;
-      padding: 6px;
-    }
-  
-    td img {
-      width: 80px;
-      height: 80px;
-    }
   }
   
-  @media screen and (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
-    }
-    
-    thead tr {
-      display: none;
-     
-    }
   
-    tr {
-      margin-bottom: 10px;
-      padding: 10px;
-      position: relative;
-      font-size: 14px;
-      text-align: right;
-    }
-  
-    td {
-      border: 1px solid #000000;
-      padding: 10px;
-      position: relative;
-      font-size: 14px;
-      text-align: right;
-    }
-  
-    td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      font-weight: bold;
-      text-align: left;
-    }
-  
-    td img {
-      width: 60px;
-      height: 60px;
-    }
+  .content p{
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.5rem;
+    line-height: 30px;
+    font-size: medium;
+    padding-top: 20px;
+    font-size: 15px;
   }
-  
-/* cart table ends*/
+
+   /* Responsive styling */
+
+@media (max-width: 768px) {
+    .hcover-content {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .Hmain {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .hcover-content {
+        font-size: 2.5rem;
+    }
+
+    .content p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hcover-content {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive styling */
+
+/* Main content styles */
+.heading {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: #333;
+}
+
+.section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
 
 
+.section h2 {
+    font-size: 24px;
+    color: #3d753f;
+    margin-bottom: 10px;
+    margin-left: 46%;
+    cursor: pointer;
+}
 
-/*Payment button starts */
+.section h3 {
+    font-size: 24px;
+    color: #3d753f;
+    margin-bottom: 10px;
+    margin-left: 43%;
+    cursor: pointer;
+}
 
-.btn {
-    padding: 1rem;
-    background: #007220;
+.section h4 {
+    font-size: 24px;
+    color: #3d753f;
+    margin-bottom: 10px;
+    margin-left: 42%;
+    cursor: pointer;
+}
+
+.section h5 {
+    font-size: 24px;
+    color: #3d753f;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    cursor: pointer;
+}
+
+.section h6 {
+    font-size: 24px;
+    color: #3d753f;
+    margin-bottom: 10px;
+    margin-left: 35%;
+    cursor: pointer;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-checkbox:checked + .toggle-label + .items {
+    display: block;
+}
+
+.items {
+    display: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.item img {
+    height: 90px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.item span {
+    flex: 1;
+    font-size: 18px;
+}
+
+.item input {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.item button {
+    background-color: #114232;
     color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background-color: #45a049;
+}
+
+
+/* Cart Table */
+
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#cart-table th, #cart-table td {
+    border: 1px solid #ddd;
+    background-color: #D9EDBF;
+    padding: 10px;
+    text-align: center;
+}
+
+#cart-table th {
+    background-color: #114232;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#cart-table td {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Buttons */
+button, .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #114232;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    align-items: right;
-    justify-content: right;
-    font-size: 1.6rem;
+    text-align: center;
     text-decoration: none;
 }
 
-.btn:hover {
-    background: #054815;
+button:hover {
+    background-color: #45a049;
 }
 
-/* Media query for payment button */
-@media screen and (max-width: 768px) {
-    .btn {
-      width: 100%;
-      font-size: 1.4rem;
-      padding: 0.8rem;
-    }
-  }
-/*Payment button ends */
+/* Proceed to payment button */
+.btn {
+    display: inline-block;
+    text-align: center;
+    background-color: #45a049;
+    border-radius: 0px;
+    width: 33%; 
+}
+
+.btn:hover {
+    background-color: #09251c;
+}
+
+/* Products section ends */
 
 /* Footer starts */
 
 footer {
-    background-color: #114232;
+    background-color: var(--dark-green);
     color: #fff;
     padding: 2rem 9%;
     display: flex;
@@ -605,43 +700,7 @@ footer {
     margin-left: 30%;
 }
 
-
-
 /* Footer ends */
-
-/* Media Queries */
-@media only screen and (max-width: 770px) {
-    .order-container {
-        flex-direction: column;
-    }
-
-    .container {
-        padding: 0.5rem;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .heading2 {
-        font-size: 1.5rem;
-        margin-top: 20px;
-    }
-
-    .order-container {
-        padding: 0.5rem;
-    }
-
-    form input[type="text"],
-    form input[type="email"],
-    form input[type="number"],
-    form select {
-        padding: 0.3rem 0.5rem;
-    }
-
-    input[type="submit"] {
-        padding: 0.5rem 1rem;
-        margin-top: 0.5rem;
-    }
-}
 
 /* media queries */
 

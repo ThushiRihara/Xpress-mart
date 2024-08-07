@@ -58,9 +58,6 @@
     </article>
 </header>
 
-<script src="script.js">
-
-</script>
 
 <!--header section ends-->
 
@@ -87,7 +84,7 @@
                         <option>Matale</option>
                     </select>
                     <label for="zipcode">Zip Code</label>
-                    <input type="number" id="zipcode" placeholder="Zip code">
+                    <input type="number" id="zipcode" placeholder="Zip code" min="0">
                 </div>
             </form>
         </div>
@@ -102,9 +99,9 @@
                     <label for="mastercard"><img src="mastercard_new.jpg" width="100" alt="MasterCard"></label>
                 </div>
                 <label for="cardnumber">Credit Card Number</label>
-                <input type="text" id="cardnumber" placeholder="Enter card number">
+                <input type="number" id="cardnumber" placeholder="Enter card number">
                 <label for="expmonth">Exp Month</label>
-                <input type="text" id="expmonth" placeholder="Enter month">
+                <input type="number" id="expmonth" placeholder="Enter month">
                 <div id="zip">
                     <label for="expyear">Exp Year</label>
                     <select id="expyear">
@@ -115,7 +112,7 @@
                         <option>2025</option>
                     </select>
                     <label for="cvv">CVV</label>
-                    <input type="number" id="cvv" placeholder="CVV">
+                    <input type="number" id="cvv" placeholder="CVV" min="0">
                 </div>
             </form>
             
@@ -158,6 +155,6 @@
 </footer>
 <!-- Footer section ends -->
 
-
+<script src="script.js"></script>
 </body>
 </html>
