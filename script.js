@@ -57,12 +57,12 @@ function updateCartTable() {
         totalPrice += item.price * item.quantity;
     });
 
-    document.getElementById("total-price").innerText = `${totalPrice.toFixed(2)}`;
+    document.getElementById("total-price").innerText = `Rs ${totalPrice.toFixed(2)}`;
 }
 
 // Function to save the current cart as favorites
 function saveToFavorites() {
-    favorites = [...cart]; // Overwrite existing favorites
+    favorites = [...cart];
     localStorage.setItem('favorites', JSON.stringify(favorites));
     alert("Items saved to favorites!");
 }
