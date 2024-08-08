@@ -107,3 +107,10 @@ document.querySelector(".btn").addEventListener("click", proceedToPayment);
 
 // Load cart data and update table when the page loads
 document.addEventListener("DOMContentLoaded", updateCartTable);
+
+//clear cart data on page refresh
+window.addEventListener('beforeunload', () => {
+    localStorage.removeItem('cart')
+})
+
+
