@@ -507,12 +507,14 @@ ul li:hover ul.dropdown {
     border-radius: 5px;
 }
 
+/* branches */
 #zip1 {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
 
+/* expiry dates */
 #zip2 {
     display: flex;
     justify-content: space-between;
