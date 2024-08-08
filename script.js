@@ -78,11 +78,10 @@ function saveToFavorites() {
     alert("Items saved to favorites!");
 }
 
-// Apply favorites to the cart and table
 function applyFavorites() {
     const storedFavorites = JSON.parse(localStorage.getItem('favorites'));
     
-    if (storedFavorites) {
+    if (storedFavorites && storedFavorites.length > 0) {
         cart = storedFavorites;
         updateCartTable();
         alert("Favorites applied to the cart!");
@@ -90,6 +89,7 @@ function applyFavorites() {
         alert("No favorites found!");
     }
 }
+
 
 // Function to proceed to payment
 function proceedToPayment() {
