@@ -392,7 +392,31 @@ ul li:hover ul.dropdown {
 /* header ends */
 
 /* order summary table starts */
+/* Cart Table */
 
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#cart-table th, #cart-table td {
+    border: 1px solid #ddd;
+    background-color: #D9EDBF;
+    padding: 10px;
+    text-align: center;
+}
+
+#cart-table th {
+    background-color: #114232;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#cart-table td {
+    font-size: 12px;
+    font-weight: bold;
+}
 /* order summary table ends */
 
 /* Order Form Starts */

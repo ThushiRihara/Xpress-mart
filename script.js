@@ -15,8 +15,16 @@ menuIcon.addEventListener('click', () => {
 //order page.js
 
 // Cart and Favorites Arrays
-let cart = [];
-let favorites = [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+// Check if the cart was initialized during this session
+if (!sessionStorage.getItem('cartInitialized')) {
+    // Clear the cart in localStorage when the page is first loaded in a new session
+    localStorage.removeItem('cart');
+    cart = [];
+    sessionStorage.setItem('cartInitialized', 'true');
+}
 
 // Function to add items to the cart
 function addToCart(itemName, itemId, itemPrice) {
@@ -58,6 +66,9 @@ function updateCartTable() {
     });
 
     document.getElementById("total-price").innerText = `Rs ${totalPrice.toFixed(2)}`;
+
+    // Save the updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 // Function to save the current cart as favorites
@@ -86,10 +97,13 @@ function proceedToPayment() {
         alert("Your cart is empty. Please add items before proceeding to payment.");
         return;
     }
+    // Save the cart to localStorage before proceeding
+    localStorage.setItem('cart', JSON.stringify(cart));
     window.location.href = './payment.html';
 }
 
 // Adding event listener to the payment button
 document.querySelector(".btn").addEventListener("click", proceedToPayment);
 
-//payment page .js
+// Load cart data and update table when the page loads
+document.addEventListener("DOMContentLoaded", updateCartTable);
