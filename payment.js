@@ -24,7 +24,7 @@ function validateForm() {
         const deliveryDate = calculateDeliveryDate();
         alert(`Thank you for your purchase, ${name}! Your order will be delivered on ${deliveryDate}.`);
     } else {
-        alert('Please fill in all the fields correctly.');
+        alert('Please fill all the fields correctly.');
     }
 }
 
@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //order summary table .js
-// Retrieve cart data from localStorage
+// Get cart data from localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Function to update cart table and total price
 function updateCartTable() {
     const cartTableBody = document.querySelector("#cart-table tbody");
-    cartTableBody.innerHTML = ''; // Clear existing rows
+    cartTableBody.innerHTML = ''; 
 
     let totalPrice = 0;
 
@@ -53,8 +53,7 @@ function updateCartTable() {
         row.innerHTML = `
             <td>${item.name}</td>
             <td>${item.quantity}</td>
-            <td>Rs ${(item.price * item.quantity).toFixed(2)}</td>
-        `;
+            <td>Rs ${(item.price * item.quantity).toFixed(2)}</td>`;
         cartTableBody.appendChild(row);
         totalPrice += item.price * item.quantity;
     });

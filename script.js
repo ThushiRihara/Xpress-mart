@@ -14,19 +14,19 @@ menuIcon.addEventListener('click', () => {
 
 //order page.js
 
-// Cart and Favorites Arrays
+// Cart and Favorites arrays
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
 // Check if the cart was initialized during this session
 if (!sessionStorage.getItem('cartInitialized')) {
-    // Clear the cart in localStorage when the page is first loaded in a new session
+    // Clear the cart in localstorage when the page is first loaded in a new session
     localStorage.removeItem('cart');
     cart = [];
     sessionStorage.setItem('cartInitialized', 'true');
 }
 
-// Function to add items to the cart
+// Add items to cart
 function addToCart(itemName, itemId, itemPrice) {
     const quantityInput = document.getElementById(itemId);
     const quantity = parseFloat(quantityInput.value);
@@ -41,13 +41,13 @@ function addToCart(itemName, itemId, itemPrice) {
         }
 
         updateCartTable();
-        quantityInput.value = ''; // Clear input after adding
+        quantityInput.value = '';
     } else {
         alert("Please enter a valid quantity.");
     }
 }
 
-// Function to update cart table and total price
+// Update cart table and total price
 function updateCartTable() {
     const cartTableBody = document.querySelector("#cart-table tbody");
     cartTableBody.innerHTML = ''; 
@@ -60,8 +60,7 @@ function updateCartTable() {
             <td>${item.name}</td>
             <td>${item.quantity}</td>
             <td>Rs ${(item.price * item.quantity).toFixed(2)}</td>
-            <td><button class="remove-btn" onclick="removeFromCart('${item.name}')">Delete</button></td>
-        `;
+            <td><button class="remove-btn" onclick="removeFromCart('${item.name}')">Delete</button></td>`;
         cartTableBody.appendChild(row);
         totalPrice += item.price * item.quantity;
     });
@@ -72,14 +71,14 @@ function updateCartTable() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Function to save the current cart as favorites
+// Save the current cart as favorites
 function saveToFavorites() {
     favorites = [...cart];
     localStorage.setItem('favorites', JSON.stringify(favorites));
     alert("Items saved to favorites!");
 }
 
-// Function to apply favorites to the cart and table
+// Apply favorites to the cart and table
 function applyFavorites() {
     const storedFavorites = JSON.parse(localStorage.getItem('favorites'));
     
