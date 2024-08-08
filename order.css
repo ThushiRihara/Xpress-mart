@@ -697,6 +697,10 @@ ul li:hover ul.dropdown {
     font-weight: bold;
 }
 
+.remove-button {
+    width: 90%;
+}
+
 /* Buttons */
 button, .btn {
     display: inline-block;
@@ -714,6 +718,15 @@ button, .btn {
 
 button:hover {
     background-color: #45a049;
+}
+
+/* Remove cart button */
+.remove-btn {
+    background-color: #45a049; 
+}
+
+.remove-btn:hover {
+    background-color: #61c666;
 }
 
 /* Proceed to payment button */

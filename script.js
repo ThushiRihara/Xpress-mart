@@ -50,7 +50,7 @@ function addToCart(itemName, itemId, itemPrice) {
 // Function to update cart table and total price
 function updateCartTable() {
     const cartTableBody = document.querySelector("#cart-table tbody");
-    cartTableBody.innerHTML = ''; // Clear existing rows
+    cartTableBody.innerHTML = ''; 
 
     let totalPrice = 0;
 
@@ -60,6 +60,7 @@ function updateCartTable() {
             <td>${item.name}</td>
             <td>${item.quantity}</td>
             <td>Rs ${(item.price * item.quantity).toFixed(2)}</td>
+            <td><button class="remove-btn" onclick="removeFromCart('${item.name}')">Delete</button></td>
         `;
         cartTableBody.appendChild(row);
         totalPrice += item.price * item.quantity;
@@ -108,9 +109,8 @@ document.querySelector(".btn").addEventListener("click", proceedToPayment);
 // Load cart data and update table when the page loads
 document.addEventListener("DOMContentLoaded", updateCartTable);
 
-//clear cart data on page refresh
-window.addEventListener('beforeunload', () => {
-    localStorage.removeItem('cart')
-})
-
-
+// Function to remove an item from the cart
+function removeFromCart(itemName) {
+    cart = cart.filter(item => item.name !== itemName);
+    updateCartTable();
+}
