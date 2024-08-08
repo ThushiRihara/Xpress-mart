@@ -507,7 +507,13 @@ ul li:hover ul.dropdown {
     border-radius: 5px;
 }
 
-#zip {
+#zip1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#zip2 {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
